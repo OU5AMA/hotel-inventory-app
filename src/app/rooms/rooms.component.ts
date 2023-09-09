@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit{
 
-ngOnInit(): void {
-    
-}
+nameOfHotel = "Helton Hotel"
+
+ngOnInit(): void {}
+
+
 }
