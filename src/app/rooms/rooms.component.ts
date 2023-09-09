@@ -14,7 +14,7 @@ rating = 5;
 swimmingPool = false;
 rooms: Room = {
   availableRooms: 39,
-  bookedRooms: 11,
+  bookedRooms: 0,
   totalRooms: 50
 }
 
