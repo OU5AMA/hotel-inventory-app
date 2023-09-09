@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit{
 
+// interpolation variable
 nameOfHotel = "Helton Hotel"
-
+rating = 5;
 ngOnInit(): void {}
 
 
