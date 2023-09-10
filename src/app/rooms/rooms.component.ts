@@ -21,24 +21,31 @@ rooms: Room = {
 roomList: RoomList[] =[
   {
     Number: 13,
-    Type: "ordinary",
+    Type: "Deluxe",
     Price: 120,
-    amenities: true,
-    ChekingTime: "1:30am"
+    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+    ChekingTime: new Date('22-Nov-2022')
   },
   {
     Number: 2,
     Type: "suit",
     Price: 300,
-    amenities: true,
-    ChekingTime: "2:30am"
+    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+    ChekingTime: new Date("12-Mar-2023")
+  },
+  {
+    Number: 24,
+    Type: "ordinary",
+    Price: 30,
+    amenities: ["Free Wi-Fi", "TV", "Bathroom"],
+    ChekingTime: new Date("12-Mar-2023")
   },
   {
     Number: 53,
     Type: "suit",
-    Price: 30,
-    amenities: false,
-    ChekingTime: "12:30am"
+    Price: 430,
+    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+    ChekingTime: new Date("2-Mar-2023")
   }
 ]
 

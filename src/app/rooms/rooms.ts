@@ -8,6 +8,6 @@ export interface RoomList{
     Number: number,
     Type: string,
     Price: number,
-    amenities: boolean,
-    ChekingTime: string
+    amenities: string[],
+    ChekingTime: Date
 }

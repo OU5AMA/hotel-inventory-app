@@ -37,10 +37,10 @@
     <td>{{i}}</td>
     <td [ngClass]="{ even: e, odd: o }">{{ e ? "Even" : "Odd" }}</td>
     <td>{{ room.Number }}</td>
-    <td>{{ room.Type }}</td>
-    <td>{{ room.Price }}</td>
-    <td>{{ room.amenities }}</td>
-    <td>{{ room.ChekingTime }}</td>
+    <td>{{ room.Type | titlecase }} </td>
+    <td>{{ room.Price | currency }}</td>
+    <td>{{ room.amenities }} </td>
+    <td> {{ room.ChekingTime | date }}</td>
   </tr>
 </table>
 
