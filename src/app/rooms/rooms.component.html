@@ -1,15 +1,12 @@
-
 <!-- calling the interpolation variable -->
 <!-- N.B: use interpolation with basic data, like string, number, even with objects. -->
-<p>Welcome to, {{ nameOfHotel }}</p>
-
+<h2 style="font-weight: 100;">Welcome to, <b><i>{{ nameOfHotel }}</i></b></h2>
 
 <!-- property binding  -->
-<p>the hotel has </p><div class="" [innerText]="rating"></div>
+<p>the hotel has</p>
+<div class="" [innerText]="rating"></div>
 
 <!-- the box is extra layer of syntactical sugar we are writing  -->
-
-
 
 <!-- event binding   -->
 <!-- It Enables you to respond to user interactions(such as clicks, keypresses, or mouse events) -->
@@ -17,10 +14,32 @@
 
 <div class="" [hidden]="swimmingPool"><p>It has a swimming pool.</p></div>
 
-
 <!-- using *ngIf -->
-<!-- using the *ngIf you specify the value if the value is false the data is not rendered, this could be considered as a better solution than the [hidden] as your data is not hidden within your html, it's only rendered if the data is true. -->
-<div class="" *ngIf="rooms.bookedRooms">
+{{ rooms?.availableRooms ?? "sorry, there are no rooms available" }}
 
-    List of booked rooms
+<!-- using the *ngIf you specify the value if the value is false the data is not rendered, this could be considered as a better solution than the [hidden] as your data is not hidden within your html, it's only rendered if the data is true. -->
+<div class="" *ngIf="rooms && rooms?.availableRooms">
+  this will be rendered if the number of the rooms is more than 0 if the number
+  is 0 == false, if not it's == true List of booked rooms
 </div>
+
+<table>
+  <tr>
+    <th>Index</th>
+    <th>Even/Odd</th>
+    <th>Room Number</th>
+    <th>Room Type</th>
+    <th>Room Price</th>
+    <th>Room Amenities</th>
+    <th>Cheking Time</th>
+  </tr>
+  <tr *ngFor="let room of roomList; let e = even; let o = odd; let i = index">
+    <td>{{i}}</td>
+    <td [ngClass]="{ even: e, odd: o }">{{ e ? "Even" : "Odd" }}</td>
+    <td>{{ room.Number }}</td>
+    <td>{{ room.Type }}</td>
+    <td>{{ room.Price }}</td>
+    <td>{{ room.amenities }}</td>
+    <td>{{ room.ChekingTime }}</td>
+  </tr>
+</table>
