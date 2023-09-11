@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
+import { RoomsListComponent } from './rooms-list/rooms-list.component';
 
 @Component({
   selector: 'app-rooms',
@@ -18,42 +19,44 @@ rooms: Room = {
   totalRooms: 30
 }
 
-roomList: RoomList[] =[
-  {
-    Number: 13,
-    Type: "Deluxe",
-    Price: 120,
-    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-    ChekingTime: new Date('22-Nov-2022')
-  },
-  {
-    Number: 2,
-    Type: "suit",
-    Price: 300,
-    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-    ChekingTime: new Date("12-Mar-2023")
-  },
-  {
-    Number: 24,
-    Type: "ordinary",
-    Price: 30,
-    amenities: ["Free Wi-Fi", "TV", "Bathroom"],
-    ChekingTime: new Date("12-Mar-2023")
-  },
-  {
-    Number: 53,
-    Type: "suit",
-    Price: 430,
-    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-    ChekingTime: new Date("2-Mar-2023")
-  }
-]
+roomList: RoomList[] = [];
 
 constructor(){
-  console.log(this.nameOfHotel);
 }
 
-ngOnInit(): void {}
+ngOnInit(): void {
+  this.roomList = [
+    {
+      Number: 13,
+      Type: "Deluxe",
+      Price: 120,
+      amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+      ChekingTime: new Date('22-Nov-2022')
+    },
+    {
+      Number: 2,
+      Type: "suit",
+      Price: 300,
+      amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+      ChekingTime: new Date("12-Mar-2023")
+    },
+    {
+      Number: 24,
+      Type: "ordinary",
+      Price: 30,
+      amenities: ["Free Wi-Fi", "TV", "Bathroom"],
+      ChekingTime: new Date("12-Mar-2023")
+    },
+    {
+      Number: 53,
+      Type: "suit",
+      Price: 430,
+      amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
+      ChekingTime: new Date("2-Mar-2023")
+    }
+  ]
+  
+}
 toggle(){
   this.swimmingPool = !this.swimmingPool;
 }

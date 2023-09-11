@@ -10,7 +10,7 @@
 
 <!-- event binding   -->
 <!-- It Enables you to respond to user interactions(such as clicks, keypresses, or mouse events) -->
-<button (click)="toggle()">Toggle</button>
+<button class="btn btn-success" (click)="toggle()">Toggle</button>
 
 <div class="" [hidden]="swimmingPool"><p>It has a swimming pool.</p></div>
 
@@ -23,25 +23,6 @@
   is 0 == false, if not it's == true List of booked rooms
 </div>
 
-<table>
-  <tr>
-    <th>Index</th>
-    <th>Even/Odd</th>
-    <th>Room Number</th>
-    <th>Room Type</th>
-    <th>Room Price</th>
-    <th>Room Amenities</th>
-    <th>Cheking Time</th>
-  </tr>
-  <tr [ngClass]="e ? 'even': 'odd'" *ngFor="let room of roomList; let e = even; let o = odd; let i = index">
-    <td>{{i}}</td>
-    <td [ngClass]="{ even: e, odd: o }">{{ e ? "Even" : "Odd" }}</td>
-    <td>{{ room.Number }}</td>
-    <td>{{ room.Type | titlecase }} </td>
-    <td>{{ room.Price | currency }}</td>
-    <td>{{ room.amenities }} </td>
-    <td> {{ room.ChekingTime | date }}</td>
-  </tr>
-</table>
+
 
 
