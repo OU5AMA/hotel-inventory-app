@@ -1,14 +1,24 @@
+<div class="container ">
+    <div class="row">
+        <div class="">
+            <div class="d-flex justify-content-center align-items-center">
+                <!-- Content to be centered goes here -->
+                <div class="" [ngSwitch]="role">
+                    <div class="" *ngSwitchCase="'ADMIN'">
+                        <app-rooms></app-rooms>
+                    </div>
+                    <div class="" *ngSwitchCase="'USER'">
+                        <p>as a user you are not allowed to access this part of the website</p>
+                    </div>
+                    <div class="" *ngSwitchDefault>
+                        <p>how the hell are you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <h1>Moroccan Hotels</h1>
 
-<div class="" [ngSwitch]="role">
-    <div class="" *ngSwitchCase="'ADMIN'">
-        <app-rooms></app-rooms>
-    </div>
-    <div class="" *ngSwitchCase="'USER'">
-        <p>as a user you are not allowed to access this part of the website</p>
-    </div>
-    <div class="" *ngSwitchDefault>
-        <p>how the hell are you!</p>
-    </div>
+
 </div>
 

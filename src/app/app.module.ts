@@ -7,7 +7,7 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoomsListComponent } from './rooms/rooms-list/rooms-list.component';
 import { HotelsListComponent } from './hotels-list/hotels-list.component';
-import { CardsComponent } from './rooms/rooms-list/cards/cards.component';
+import { CardsComponent } from './hotels-list/cards/cards.component';
 
 @NgModule({
   declarations: [
