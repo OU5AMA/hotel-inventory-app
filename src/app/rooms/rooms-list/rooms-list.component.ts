@@ -10,6 +10,5 @@ export class RoomsListComponent implements OnInit {
   @Input() rooms: RoomList[] = [];
   constructor() {}
   ngOnInit(): void {
-    this.rooms
   }
 }
