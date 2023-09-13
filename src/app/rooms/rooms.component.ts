@@ -2,14 +2,14 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
-  selector: 'app-rooms',
+  selector: 'app-room',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss'],
 })
 export class RoomsComponent implements OnInit{
 
 
-nameOfHotel = "Helton Hotel"
+nameOfHotel = "List of Hotels"
 rating = 5;
 swimmingPool = false;
 rooms: Room = {
@@ -30,28 +30,28 @@ ngOnInit(): void {
       Type: "Deluxe",
       Price: 120,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date('22-Nov-2022')
+      ChekingTime: new Date('22-November-2022')
     },
     {
       Number: 2,
       Type: "suit",
       Price: 300,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date("12-Mar-2023")
+      ChekingTime: new Date("12-Mars-2023")
     },
     {
       Number: 24,
       Type: "ordinary",
       Price: 30,
       amenities: ["Free Wi-Fi", "TV", "Bathroom"],
-      ChekingTime: new Date("12-Mar-2023")
+      ChekingTime: new Date("12-Mars-2023")
     },
     {
       Number: 53,
       Type: "suit",
       Price: 430,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date("2-Mar-2023")
+      ChekingTime: new Date("2-October-2023")
     }
   ]
   
