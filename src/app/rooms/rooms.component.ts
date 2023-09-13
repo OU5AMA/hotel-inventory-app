@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
-import { RoomsListComponent } from './rooms-list/rooms-list.component';
 
 @Component({
   selector: 'app-rooms',
@@ -19,7 +18,7 @@ rooms: Room = {
   totalRooms: 30
 }
 
-roomList: RoomList[] = [];
+@Input() roomList: RoomList[] = [];
 
 constructor(){
 }

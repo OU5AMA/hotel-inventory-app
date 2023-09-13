@@ -15,14 +15,14 @@
 <div class="" [hidden]="swimmingPool"><p>It has a swimming pool.</p></div>
 
 <!-- using *ngIf -->
-{{ rooms?.availableRooms ?? "sorry, there are no rooms available" }}
+<!-- {{ rooms?.availableRooms ?? "sorry, there are no rooms available" }} -->
 
 <!-- using the *ngIf you specify the value if the value is false the data is not rendered, this could be considered as a better solution than the [hidden] as your data is not hidden within your html, it's only rendered if the data is true. -->
 <div class="" *ngIf="rooms && rooms?.availableRooms">
   this will be rendered if the number of the rooms is more than 0 if the number
   is 0 == false, if not it's == true List of booked rooms
 </div>
-
+<app-rooms-list [rooms]="roomList"></app-rooms-list>
 
 
 
