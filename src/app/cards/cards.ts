@@ -1,4 +1,4 @@
-export interface Cards {
+export interface Hotel {
     name: string;
     rating: number;
     location: string;
