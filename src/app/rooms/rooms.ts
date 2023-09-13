@@ -5,9 +5,9 @@ export interface Room {
 }
 
 export interface RoomList{
-    Number: number,
-    Type: string,
-    Price: number,
-    amenities: string[],
-    ChekingTime: Date
+    Number: number;
+    Type: string;
+    Price: number;
+    amenities: string[];
+    ChekingTime: Date;
 }
