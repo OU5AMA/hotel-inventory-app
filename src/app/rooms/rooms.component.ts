@@ -9,7 +9,7 @@ import { Room, RoomList } from './rooms';
 export class RoomsComponent implements OnInit{
 
 
-nameOfHotel = "Helton Hotel"
+nameOfHotel = "List of Hotels"
 rating = 5;
 swimmingPool = false;
 rooms: Room = {
