@@ -9,6 +9,5 @@ import { RoomList } from '../rooms';
 export class RoomsListComponent implements OnInit {
   @Input() rooms: RoomList[] = [];
   constructor() {}
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

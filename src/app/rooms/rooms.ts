@@ -10,4 +10,5 @@ export interface RoomList{
     Price: number;
     amenities: string[];
     ChekingTime: Date;
+    booked: boolean;
 }

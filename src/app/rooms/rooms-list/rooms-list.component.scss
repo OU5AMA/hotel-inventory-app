@@ -1,0 +1,12 @@
+.booked{
+    background-color: orangered;
+}
+
+.free{
+    background-color: lightgreen;
+}
+
+.booked, .free{
+    height: 100%;
+    width: 100%;
+}

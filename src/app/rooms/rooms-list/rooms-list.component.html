@@ -1,21 +1,30 @@
 <p>rooms-list works!</p>
 <table class="table">
-    <tr>
-      <th>Index</th>
-      <th>Even/Odd</th>
-      <th>Room Number</th>
-      <th>Room Type</th>
-      <th>Room Price</th>
-      <th>Room Amenities</th>
-      <th>Cheking Time</th>
-    </tr>
-    <tr [ngClass]="e ? 'even': 'odd'" *ngFor="let room of rooms; let e = even; let o = odd; let i = index">
-      <td>{{i}}</td>
-      <td [ngClass]="{ even: e, odd: o }">{{ e ? "Even" : "Odd" }}</td>
-      <td>{{ room.Number }}</td>
-      <td>{{ room.Type | titlecase }} </td>
-      <td>{{ room.Price | currency }}</td>
-      <td>{{ room.amenities }} </td>
-      <td> {{ room.ChekingTime | date }}</td>
-    </tr>
-  </table>
+  <tr>
+    <th>Index</th>
+    <th>Even/Odd</th>
+    <th>Room Number</th>
+    <th>Room Type</th>
+    <th>Room Price</th>
+    <th>Room Amenities</th>
+    <th>Cheking Time</th>
+    <th>Availability</th>
+  </tr>
+  <tr
+    [ngClass]="e ? 'even' : 'odd'"
+    *ngFor="let room of rooms; let e = even; let o = odd; let i = index"
+  >
+    <td>{{ i }}</td>
+    <td [ngClass]="{ even: e, odd: o }">{{ e ? "Even" : "Odd" }}</td>
+    <td>{{ room.Number }}</td>
+    <td>{{ room.Type | titlecase }}</td>
+    <td>{{ room.Price | currency }}</td>
+    <td>{{ room.amenities }}</td>
+    <td>{{ room.ChekingTime | date }}</td>
+    <td>
+      <button [ngClass]="{ booked: room.booked, free: !room.booked }">
+        {{ room.booked ? "Booked" : "Free" }}
+      </button>
+    </td>
+  </tr>
+</table>
