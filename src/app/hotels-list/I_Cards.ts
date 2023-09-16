@@ -3,4 +3,5 @@ export interface Cards{
  image_url: string;
  location: string;
  amenities: string[];
+ favorit: boolean;
 }

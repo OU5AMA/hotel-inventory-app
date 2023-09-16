@@ -16,31 +16,36 @@ export class HotelsListComponent implements OnInit {
         "name": "Marrakech Luxury Resort",
         "image_url": "../../assets/hotels/Marrakech luxury resort.png",
         "location": "Marrakech, Morocco",
-        "amenities": ["Swimming Pool", "Spa", "Fine Dining", "Free Wi-Fi"]
+        "amenities": ["Swimming Pool", "Spa", "Fine Dining", "Free Wi-Fi"],
+        "favorit": false
       },
       {
         "name": "Casablanca Beachfront Hotel",
         "image_url": "../../assets/hotels/casablance on the ocean.jpg",
         "location": "Casablanca, Morocco",
-        "amenities": ["Beach Access", "Fitness Center", "Restaurant", "Bar"]
+        "amenities": ["Beach Access", "Fitness Center", "Restaurant", "Bar"],
+        "favorit": false
       },
       {
         "name": "Atlas Mountains Retreat",
         "image_url": "../../assets/hotels/Atlas montains.jpg",
         "location": "Atlas Mountains, Morocco",
-        "amenities": ["Scenic Views", "Hiking Trails", "Fireplace", "Restaurant"]
+        "amenities": ["Scenic Views", "Hiking Trails", "Fireplace", "Restaurant"],
+        "favorit": false
       },
       {
         "name": "Fez Historic Palace",
         "image_url": "../../assets/hotels/fez.jpg",
         "location": "Fez, Morocco",
-        "amenities": ["Historic Architecture", "Courtyard Garden", "Restaurant", "Free Breakfast"]
+        "amenities": ["Historic Architecture", "Courtyard Garden", "Restaurant", "Free Breakfast"],
+        "favorit": false
       },
       {
         "name": "Essaouira Beachside Resort",
         "image_url": "../../assets/hotels/essaouira.jpg",
         "location": "Essaouira, Morocco",
-        "amenities": ["Beachfront Views", "Poolside Bar", "Spa", "Fitness Center"]
+        "amenities": ["Beachfront Views", "Poolside Bar", "Spa", "Fitness Center"],
+        "favorit": false
       }
     ]
     
