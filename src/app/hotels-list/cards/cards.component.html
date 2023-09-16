@@ -5,9 +5,20 @@
         <img
           [src]="hotel.image_url"
           alt="Image of hotel"
-          class="card-img-top w-100"
+          class="card-img-top w-100" 
         />
         <div class="card-body">
+          <div class="" [ngSwitch]="hotel.favorite">
+            <div class="" *ngSwitchCase="true">
+              <img src="../../../assets/icon/star-fill.svg" alt="">
+            </div>
+            <div class="" *ngSwitchDefault>
+              <img src="../../../assets/icon/star-gray.svg" alt="">
+            </div>
+          </div>
+          <!-- <i class="bi bi-star-fill"></i> -->
+
+
           <h5 class="card-title">{{ hotel.name }}</h5>
           <p class="card-text">Location: {{ hotel.location }}</p>
           <ul class="list-group list-group-flash">
