@@ -9,6 +9,7 @@
     <th>Room Amenities</th>
     <th>Cheking Time</th>
     <th>Availability</th>
+    <th>Select a Room</th>
   </tr>
   <tr
     [ngClass]="e ? 'even' : 'odd'"
@@ -25,6 +26,9 @@
       <button [ngClass]="{ booked: room.booked, free: !room.booked }">
         {{ room.booked ? "Booked" : "Free" }}
       </button>
+    </td>
+    <td>
+      <button class="btn btn-primary" (click)="selectRoom(room)">Select</button>
     </td>
   </tr>
 </table>

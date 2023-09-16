@@ -64,4 +64,9 @@ toggle(){
   this.swimmingPool = !this.swimmingPool;
 }
 
+
+handleCustomEvent(room: RoomList){
+  room.booked = !room.booked;
+}
+
 }

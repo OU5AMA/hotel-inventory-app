@@ -1,6 +1,11 @@
 <!-- calling the interpolation variable -->
 <!-- N.B: use interpolation with basic data, like string, number, even with objects. -->
-<h2 style="font-weight: 100;">Welcome to, <b><i>{{ nameOfHotel }}</i></b></h2>
+<h2 style="font-weight: 100">
+  Welcome to,
+  <b
+    ><i>{{ nameOfHotel }}</i></b
+  >
+</h2>
 
 <!-- property binding  -->
 <p>the hotel has</p>
@@ -22,7 +27,7 @@
   this will be rendered if the number of the rooms is more than 0 if the number
   is 0 == false, if not it's == true List of booked rooms
 </div>
-<app-rooms-list [rooms]="roomList"></app-rooms-list>
-
-
-
+<app-rooms-list
+  [rooms]="roomList"
+  (customEvent)="handleCustomEvent($event)"
+></app-rooms-list>

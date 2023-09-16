@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { RoomList } from '../rooms';
 
 @Component({
@@ -8,6 +8,10 @@ import { RoomList } from '../rooms';
 })
 export class RoomsListComponent implements OnInit {
   @Input() rooms: RoomList[] = [];
+  @Output() customEvent = new EventEmitter<RoomList>();
   constructor() {}
   ngOnInit(): void {}
+  selectRoom(room: RoomList){
+    this.customEvent.emit(room);
+  }
 }
