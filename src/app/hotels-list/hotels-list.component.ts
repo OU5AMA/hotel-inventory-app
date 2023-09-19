@@ -9,7 +9,10 @@ import { Cards } from './I_Cards';
 export class HotelsListComponent implements OnInit {
   @Input() cards: Cards[] = [];
 
-  constructor() {}
+  
+  constructor() {
+    this.favoriteHotels = this.cards.filter(hotel => hotel.favorite === true);
+  }
   ngOnInit(): void {
     this.cards=[
       {
@@ -51,8 +54,11 @@ export class HotelsListComponent implements OnInit {
     
     
   }
+  favoriteHotels: Cards[] = [];
 
+  
   localFunc(hotel: Cards){
     hotel.favorite = !hotel.favorite;
   }
+
 }

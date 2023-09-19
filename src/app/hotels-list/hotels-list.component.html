@@ -1,2 +1,35 @@
 <h3>Hotel Lists:</h3>
-<app-cards [hotels] = "cards" (eventName)="localFunc($event)"></app-cards> 
+
+<app-cards [hotels]="cards" (eventName)="localFunc($event)"></app-cards>
+
+<h1>Favorite hotels</h1>
+
+<div
+  class="favoriteHotels col-lg-3 col-12 mb-4"
+  *ngFor="let favHotel of favoriteHotels"
+>
+  <div class="card h-100">
+    <img
+      [src]="favHotel.image_url"
+      alt="hotel image"
+      srcset=""
+      class="card-img-top w-100"
+    />
+    <div class="card-body">
+      <div class="">
+        <img src="../../../assets/icon/star-fill.svg" alt="" />
+      </div>
+      <h5 class="card-title">{{ favHotel.name }}</h5>
+      <p class="card-text">{{ favHotel.location }}</p>
+      <ul class="list-group listgroup-flash">
+        <li
+          class="list-group-item"
+          *ngFor="let amenity of favHotel.amenities"
+        >{{amenity}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- let's create a show all cards | show favorite only div -->

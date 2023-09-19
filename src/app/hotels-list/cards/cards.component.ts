@@ -12,7 +12,6 @@ export class CardsComponent implements OnInit{
   @Input() hotels: Cards[] = [];
   @Output() eventName = new EventEmitter<Cards>();
   constructor(){
-
   }
   ngOnInit(): void {
       
