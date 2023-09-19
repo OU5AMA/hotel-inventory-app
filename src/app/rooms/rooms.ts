@@ -9,6 +9,7 @@ export interface RoomList{
     Type: string;
     Price: number;
     amenities: string[];
-    ChekingTime: Date;
+    CheckInTime: Date;
+    CheckOutTime: Date;
     booked: boolean;
 }

@@ -7,7 +7,8 @@
     <th>Room Type</th>
     <th>Room Price</th>
     <th>Room Amenities</th>
-    <th>Cheking Time</th>
+    <th>Check in Time</th>
+    <th>Check out Time</th>
     <th>Availability</th>
     <th>Select a Room</th>
   </tr>
@@ -21,7 +22,8 @@
     <td>{{ room.Type | titlecase }}</td>
     <td>{{ room.Price | currency }}</td>
     <td>{{ room.amenities }}</td>
-    <td>{{ room.ChekingTime | date }}</td>
+    <td>{{ room.CheckInTime | date }}</td>
+    <td>{{ room.CheckOutTime | date }}</td>
     <td>
       <button [ngClass]="{ booked: room.booked, free: !room.booked }">
         {{ room.booked ? "Booked" : "Free" }}

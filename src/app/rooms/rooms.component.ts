@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
   selector: 'app-room',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss'],
+  // changeDetection: ChangeDetectionStrategy,
 })
 export class RoomsComponent implements OnInit{
 
@@ -30,7 +31,8 @@ ngOnInit(): void {
       Type: "Deluxe",
       Price: 120,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date('22-November-2022'),
+      CheckInTime: new Date('22-November-2022'),
+      CheckOutTime: new Date("12-November-2023"),
       booked: false
     },
     {
@@ -38,7 +40,8 @@ ngOnInit(): void {
       Type: "suit",
       Price: 300,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date("12-Mars-2023"),
+      CheckInTime: new Date("12-Mars-2023"),
+      CheckOutTime: new Date("12-November-2023"),
       booked: false
     },
     {
@@ -46,7 +49,8 @@ ngOnInit(): void {
       Type: "ordinary",
       Price: 30,
       amenities: ["Free Wi-Fi", "TV", "Bathroom"],
-      ChekingTime: new Date("12-Mars-2023"),
+      CheckInTime: new Date("12-Mars-2023"),
+      CheckOutTime: new Date("12-November-2023"),
       booked: false
     },
     {
@@ -54,7 +58,8 @@ ngOnInit(): void {
       Type: "suit",
       Price: 430,
       amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen"],
-      ChekingTime: new Date("2-October-2023"),
+      CheckInTime: new Date("2-October-2023"),
+      CheckOutTime: new Date("12-November-2023"),
       booked: true
     }
   ]
@@ -68,5 +73,7 @@ toggle(){
 handleCustomEvent(room: RoomList){
   room.booked = !room.booked;
 }
+
+
 
 }
