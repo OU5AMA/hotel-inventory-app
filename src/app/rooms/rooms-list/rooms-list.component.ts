@@ -14,4 +14,19 @@ export class RoomsListComponent implements OnInit {
   selectRoom(room: RoomList){
     this.customEvent.emit(room);
   }
+  addRoom(){
+    const room: RoomList = {
+      Number: 32,
+      Type: "Royal-suit",
+      Price: 2000,
+      amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen", "private pool"],
+      CheckInTime: new Date("4-December-2023"),
+      CheckOutTime: new Date("6-December-2023"),
+      booked: true
+    }
+    // this.rooms.push(room);
+    this.rooms = [...this.rooms, room];
+    
+    console.log(this.rooms);
+  }
 }

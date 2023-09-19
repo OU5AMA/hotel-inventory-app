@@ -5,7 +5,7 @@ import { Room, RoomList } from './rooms';
   selector: 'app-room',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss'],
-  // changeDetection: ChangeDetectionStrategy,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RoomsComponent implements OnInit{
 
@@ -63,7 +63,7 @@ ngOnInit(): void {
       booked: true
     }
   ]
-  
+  console.log(this.roomList);
 }
 toggle(){
   this.swimmingPool = !this.swimmingPool;
@@ -73,18 +73,4 @@ toggle(){
 handleCustomEvent(room: RoomList){
   room.booked = !room.booked;
 }
-
-addRoom(){
-  const room: RoomList = {
-    Number: 32,
-    Type: "Royal-suit",
-    Price: 2000,
-    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen", "private pool"],
-    CheckInTime: new Date("4-December-2023"),
-    CheckOutTime: new Date("6-December-2023"),
-    booked: true
-  }
-  this.roomList.push(room);
-}
-
 }
