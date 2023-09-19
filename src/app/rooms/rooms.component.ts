@@ -74,6 +74,17 @@ handleCustomEvent(room: RoomList){
   room.booked = !room.booked;
 }
 
-
+addRoom(){
+  const room: RoomList = {
+    Number: 32,
+    Type: "Royal-suit",
+    Price: 2000,
+    amenities: ["Air Conditioner", "Free Wi-Fi", "TV", "Bathroom", "Kitchen", "private pool"],
+    CheckInTime: new Date("4-December-2023"),
+    CheckOutTime: new Date("6-December-2023"),
+    booked: true
+  }
+  this.roomList.push(room);
+}
 
 }
