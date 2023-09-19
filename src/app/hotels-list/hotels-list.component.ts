@@ -51,4 +51,8 @@ export class HotelsListComponent implements OnInit {
     
     
   }
+
+  localFunc(hotel: Cards){
+    hotel.favorite = !hotel.favorite;
+  }
 }
